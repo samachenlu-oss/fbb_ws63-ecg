@@ -1,0 +1,18 @@
+static_library("ecg_sle_simulator") {
+  sources = [ "ecg_sle_simulator.c" ]
+
+  deps = [ "//applications/sample/wifi-iot/app/health_detect/ecg_app/sle_task:sle_task" ]
+
+  cflags = [ "-Wno-unused-parameter" ]
+
+  include_dirs = [
+    "//commonlibrary/utils_lite/include",
+    "//base/startup/init/interfaces/innerkits/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//applications/sample/wifi-iot/app/health_detect/ecg_app/sle_task",
+    "//applications/sample/wifi-iot/app/health_detect/ecg_app/uart_task",
+    "//device/soc/hisilicon/ws63v100/sdk/middleware/utils/common_headers/native",
+    "//device/soc/hisilicon/ws63v100/sdk/kernel/osal/include/schedule",
+    "//third_party/bounds_checking_function/include",
+  ]
+}

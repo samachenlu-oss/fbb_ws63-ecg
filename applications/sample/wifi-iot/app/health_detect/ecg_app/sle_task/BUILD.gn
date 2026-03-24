@@ -1,0 +1,30 @@
+static_library("sle_task") {
+  sources = [
+    "sle_task.c",
+    "sle_task_adv.c",
+  ]
+
+  defines = [
+    "CONFIG_UART_SUPPORT_TX",
+    "CONFIG_UART_SUPPORT_RX",
+  ]
+
+  cflags = [ "-Wno-unused-parameter" ]
+
+  include_dirs = [
+    "//commonlibrary/utils_lite/include",
+    "//base/startup/init/interfaces/innerkits/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//device/soc/hisilicon/ws63v100/adapter/hals/communication/sle_lite/include",
+    "//device/soc/hisilicon/ws63v100/sdk/include",
+    "//device/soc/hisilicon/ws63v100/sdk/include/middleware/services/bts/sle",
+    "//device/soc/hisilicon/ws63v100/sdk/kernel/osal/include/schedule",
+    "//device/soc/hisilicon/ws63v100/sdk/include/driver",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/chips/ws63/rom/drivers/chips/ws63/porting/pinctrl",
+    "//base/iothardware/peripheral/interfaces/inner_api",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/drivers/hal/uart",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/chips/ws63/porting/uart",
+    "//device/soc/hisilicon/ws63v100/sdk/middleware/utils/common_headers/native",
+    "//third_party/bounds_checking_function/include",
+  ]
+}

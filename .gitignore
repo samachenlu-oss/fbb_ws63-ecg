@@ -1,0 +1,8 @@
+*
+!/.gitignore
+!/README.md
+!/applications/
+!/applications/sample/
+!/applications/sample/wifi-iot/
+!/applications/sample/wifi-iot/app/
+!/applications/sample/wifi-iot/app/**

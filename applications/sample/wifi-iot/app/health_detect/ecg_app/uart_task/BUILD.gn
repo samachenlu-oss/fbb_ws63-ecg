@@ -1,0 +1,24 @@
+static_library("uart_task") {
+  sources = [ "uart_task.c" ]
+
+  defines = [
+    "CONFIG_UART_SUPPORT_TX",
+    "CONFIG_UART_SUPPORT_RX",
+  ]
+
+  include_dirs = [
+    "//utils/native/lite/include",
+    "//kernel/liteos_m/kal",
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//base/iothardware/peripheral/interfaces/inner_api",
+    # WS63 SDK paths
+   "//device/soc/hisilicon/ws63v100/sdk/include",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/drivers/hal",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/chips/ws63/include",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/chips/ws63/porting/pinctrl",
+    "//device/soc/hisilicon/ws63v100/sdk/include",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/drivers/hal/uart",
+    "//device/soc/hisilicon/ws63v100/sdk/drivers/chips/ws63/porting/uart",
+    "//device/soc/hisilicon/ws63v100/sdk/middleware/utils/common_headers/native",
+  ]
+}
