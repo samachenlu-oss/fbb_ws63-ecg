@@ -1,6 +1,7 @@
 *
 !/.gitignore
 !/README.md
+!/AGENT_SYNC_GUIDE_ZH.md
 !/applications/
 !/applications/sample/
 !/applications/sample/wifi-iot/
